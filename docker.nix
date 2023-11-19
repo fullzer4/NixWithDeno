@@ -3,12 +3,10 @@
 }:
 
 pkgs.dockerTools.buildImage {
-  name = "docker-bin-deno";
+  name = "docker";
 
   config = {
-
-    Cmd = [ "${pkgsLinux.hello}/bin/hello" ];
-
+    Cmd = [ "./NixWithDeno" ];
   };
-
 }
+
